@@ -2,6 +2,9 @@
 
 This is a JavaFX-based protein viewer.
 
+![Main Visualization](/resources/documentation_images/mainView.png) 
+
+
 ## Getting Started
 
 This project was developed in java. Download the source code and build it yourself or download the jar and run 
