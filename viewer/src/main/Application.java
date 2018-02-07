@@ -24,7 +24,7 @@ public class Application extends javafx.application.Application {
 
         FXMLLoader fxmlLoader = new FXMLLoader();
         Parent root;
-        try(InputStream ins= getClass().getResource("../view/connector/mainView.fxml").openStream()){
+        try(InputStream ins= getClass().getResource("/view/connector/mainView.fxml").openStream()){
             root=fxmlLoader.load(ins);
         }
 
@@ -35,7 +35,6 @@ public class Application extends javafx.application.Application {
         //set Stage boundaries to visible bounds of the main screen
         primaryStage.setScene(new Scene(root, prefWidth, prefHeight,false, SceneAntialiasing.BALANCED));
         primaryStage.setTitle("PDBViewer");
-        primaryStage.setFullScreen(true);
         primaryStage.show();
     }
 

@@ -23,13 +23,15 @@ public class PDBSearchWindow {
             final Parent root = loader.load();
             final Scene scene = new Scene(root);
             stage.setScene(scene);
+
         } catch (IOException e) {
 
         }
     }
 
     public void show(){
-        stage.show();
+
+            stage.show();
     }
 
     public PopupConnector getController(){
