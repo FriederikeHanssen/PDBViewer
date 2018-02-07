@@ -29,7 +29,7 @@ Denis Heid (https://github.com/Hyde46) on mesh generation for the cartoon view
 
 ## Authors
 
-* **Friederike Hanssen** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Friederike Hanssen**
 
 ## License
 
