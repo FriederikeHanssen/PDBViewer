@@ -10,6 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public class AGraph {
 
     private final ObservableList<ANode> nodes;

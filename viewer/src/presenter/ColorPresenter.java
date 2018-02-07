@@ -11,6 +11,10 @@ import view.graph.*;
 
 import java.util.*;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 @SuppressWarnings("unchecked")
 class ColorPresenter {
 

@@ -3,6 +3,10 @@ package model.peptide;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public class AminoAcid {
 
     private final List<Atom> atoms;

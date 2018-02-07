@@ -7,6 +7,10 @@ import utils.PDBParser;
 
 import java.util.List;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public class ReadInFromListService extends Service<List<List<AminoAcid>>> {
 
     private List<String> pdb;

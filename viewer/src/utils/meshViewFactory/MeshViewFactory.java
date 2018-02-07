@@ -12,6 +12,7 @@ import java.util.List;
 /**
  * @author Denis Heid, Friederike Hanssen, Jan. 2018
  */
+
 final class MeshViewFactory {
 
     private static List<Point3D> mainPoints = new ArrayList<>();

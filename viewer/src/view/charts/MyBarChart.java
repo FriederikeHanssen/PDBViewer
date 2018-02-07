@@ -5,6 +5,9 @@ import javafx.scene.Scene;
 import javafx.scene.chart.*;
 import javafx.stage.Stage;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
 
 @SuppressWarnings("unchecked")
 public class MyBarChart {

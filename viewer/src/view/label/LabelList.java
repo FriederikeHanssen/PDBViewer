@@ -8,6 +8,10 @@ import javafx.scene.layout.HBox;
 import model.peptide.AminoAcidProperties;
 import model.peptide.SecondaryStructureProperties;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public class LabelList extends Group {
 
     private final HBox labelList;

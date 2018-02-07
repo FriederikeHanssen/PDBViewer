@@ -7,6 +7,10 @@ import javafx.collections.transformation.FilteredList;
 
 import java.util.List;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public class PDBListView{
 
     private final ObservableList<String> pdbList = FXCollections.observableArrayList();

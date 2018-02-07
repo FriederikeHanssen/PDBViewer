@@ -28,6 +28,10 @@ import view.label.LabelView;
 
 import java.util.*;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public class GraphPresenter {
 
     private final MainPresenter mainPresenter;

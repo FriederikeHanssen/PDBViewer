@@ -1,5 +1,9 @@
 package model.graph;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public class AEdge {
 
     private final ANode source;

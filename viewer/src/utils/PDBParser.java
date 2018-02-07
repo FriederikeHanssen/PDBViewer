@@ -10,6 +10,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public final class PDBParser {
 
     private static final List<List<AminoAcid>> chainList = new ArrayList<>();

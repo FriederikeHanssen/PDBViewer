@@ -12,6 +12,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
 public class ChangeSphereDrawModeCommand extends ACommand {
 
     private final AGraphView graphView;

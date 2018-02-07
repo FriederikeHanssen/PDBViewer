@@ -10,6 +10,9 @@ import presenter.MainPresenter;
 
 import java.io.InputStream;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
 
 public class Application extends javafx.application.Application {
 

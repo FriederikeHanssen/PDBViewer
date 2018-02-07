@@ -7,6 +7,10 @@ import model.graph.ANode;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public class MyFileContainer {
 
     private final List<ANode> nodes;

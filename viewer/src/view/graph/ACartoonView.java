@@ -7,6 +7,10 @@ import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.MeshView;
 import javafx.scene.shape.TriangleMesh;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public class ACartoonView extends Group{
 
     private final MeshView meshView;

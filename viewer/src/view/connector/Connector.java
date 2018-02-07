@@ -11,6 +11,10 @@ import javafx.scene.layout.VBox;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public class Connector implements Initializable {
 
     @FXML

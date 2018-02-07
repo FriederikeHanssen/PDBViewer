@@ -11,6 +11,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public class ARibbonView extends Group{
 
     private  TriangleMesh mesh;

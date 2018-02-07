@@ -7,6 +7,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public enum AminoAcidProperties {
     //http://jmol.sourceforge.net/jscolors/#Residues:%20amino%20acids,%20nucleotides
     ALANINE("ALA", 'A', Color.web("C8C8C8"),

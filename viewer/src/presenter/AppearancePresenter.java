@@ -1,10 +1,13 @@
 package presenter;
 
-
 import javafx.beans.value.ChangeListener;
 import view.graph.AEdgeView;
 import view.graph.ANodeView;
 import view.graph.MyLine3D;
+
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
 
 @SuppressWarnings("unchecked")
 class AppearancePresenter {

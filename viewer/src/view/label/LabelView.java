@@ -8,6 +8,9 @@ import javafx.scene.text.Font;
 import model.peptide.AminoAcidProperties;
 import model.peptide.SecondaryStructureProperties;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
 
 public class LabelView extends Group{
 

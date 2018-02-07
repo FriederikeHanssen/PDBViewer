@@ -11,6 +11,9 @@ import model.graph.ANode;
 
 import java.util.*;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
 
 public final class PDBToGraphFormatMover {
 

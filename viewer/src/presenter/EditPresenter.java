@@ -9,6 +9,10 @@ import javafx.scene.control.ButtonType;
 import model.ASelectionModel;
 import model.graph.ANode;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 class EditPresenter {
 
     private final MainPresenter mainPresenter;

@@ -8,6 +8,9 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
 
 public class PopupConnector implements Initializable {
 

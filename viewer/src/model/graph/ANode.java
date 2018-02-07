@@ -9,6 +9,10 @@ import model.peptide.SecondaryStructureProperties;
 
 import java.util.List;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public class ANode {
 
     private final IntegerProperty id;

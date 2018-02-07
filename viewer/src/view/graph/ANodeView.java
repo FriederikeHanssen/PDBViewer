@@ -7,6 +7,10 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.Sphere;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public class ANodeView extends Group{
 
     public static final double radius = 12.0;

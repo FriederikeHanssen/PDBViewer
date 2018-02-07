@@ -14,6 +14,9 @@ import view.charts.MyPieChart;
 
 import java.util.*;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
 
 @SuppressWarnings("unchecked")
 class ChartPresenter {

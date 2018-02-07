@@ -7,6 +7,10 @@ import javafx.collections.ObservableList;
 import model.peptide.AminoAcidProperties;
 import model.peptide.SecondaryStructureProperties;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public class ASuperNode {
 
     private final ObservableList<ANode> nodeCollection;

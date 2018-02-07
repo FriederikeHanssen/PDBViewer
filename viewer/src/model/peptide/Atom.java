@@ -2,6 +2,10 @@ package model.peptide;
 
 import javafx.geometry.Point3D;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public class Atom {
 
     private  int serial;

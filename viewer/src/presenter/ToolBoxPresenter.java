@@ -9,6 +9,9 @@ import javafx.geometry.Point3D;
 import javafx.scene.transform.Rotate;
 import javafx.util.Duration;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
 
 class ToolBoxPresenter {
 

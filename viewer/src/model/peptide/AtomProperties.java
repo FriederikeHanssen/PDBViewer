@@ -2,6 +2,10 @@ package model.peptide;
 
 import javafx.scene.paint.Color;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public enum AtomProperties {
 
     //http://jmol.sourceforge.net/jscolors/

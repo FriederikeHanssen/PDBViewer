@@ -8,6 +8,9 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.Cylinder;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
 
 public class MyLine3D extends Group {
 

@@ -1,5 +1,9 @@
 package utils;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public class Triplet<T, U, V> {
 
     private final T first;

@@ -2,6 +2,10 @@ package model.peptide;
 
 import javafx.scene.paint.Color;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public enum SecondaryStructureProperties {
     //http://jmol.sourceforge.net/jscolors/#Residues:%20amino%20acids,%20nucleotides
     HELIX(Color.web("FF0080"), 'H'),

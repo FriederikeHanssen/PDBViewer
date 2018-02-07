@@ -12,6 +12,10 @@ import view.connector.PopupConnector;
 import java.io.File;
 import java.util.List;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 @SuppressWarnings("unchecked")
 class IOPresenter {
 

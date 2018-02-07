@@ -8,6 +8,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 class LoadCompleteRCSBTask extends Task<List<String>> {
 
     private final List<String> result = new ArrayList<>();

@@ -12,6 +12,10 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 class LoadFromURLTask extends Task<List<String>> {
 
     private final String url;

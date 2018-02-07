@@ -10,6 +10,10 @@ import utils.PDBParser;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public class ReadInFromFileService extends Service<List<List<AminoAcid>>> {
     private String filepath;
 

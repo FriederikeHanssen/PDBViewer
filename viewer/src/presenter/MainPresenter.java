@@ -17,6 +17,9 @@ import javafx.stage.*;
 import view.graph.AGraphView;
 import view.label.LabelList;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
 
 public class MainPresenter {
 

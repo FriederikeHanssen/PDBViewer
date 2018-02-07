@@ -6,6 +6,10 @@ import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
 import javafx.stage.Stage;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public class MyPieChart {
 
     private final PieChart pieChart;

@@ -8,6 +8,10 @@ import view.connector.PopupConnector;
 
 import java.io.IOException;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public class PDBSearchWindow {
 
     private final FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/connector/Popup.fxml"));

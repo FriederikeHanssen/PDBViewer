@@ -2,6 +2,10 @@ package utils;
 
 import java.util.ArrayList;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public class ArrayHelper {
 
     public static float[] toPrimitiveFloatArray(ArrayList<Float> list){

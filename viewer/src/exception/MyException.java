@@ -1,5 +1,9 @@
 package exception;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public class MyException extends Exception {
 
     public MyException(){

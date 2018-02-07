@@ -2,6 +2,10 @@ package utils;
 
 import javafx.scene.paint.Color;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public enum Colors {
     DARKRED(Color.DARKRED),
     DARKBLUE(Color.DARKBLUE),

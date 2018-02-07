@@ -19,6 +19,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 public class AGraphView extends Group {
 
     public static final int cameraZTranslate = -6000;

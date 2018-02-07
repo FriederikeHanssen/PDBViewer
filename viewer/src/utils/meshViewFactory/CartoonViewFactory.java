@@ -16,6 +16,9 @@ import utils.Triplet;
 
 import java.util.*;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
 
 public final class CartoonViewFactory {
 

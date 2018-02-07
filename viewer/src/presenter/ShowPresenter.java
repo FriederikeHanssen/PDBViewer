@@ -9,6 +9,10 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * @author Friederike Hanssen, 01.2018
+ */
+
 @SuppressWarnings("unchecked")
 class ShowPresenter {
 
