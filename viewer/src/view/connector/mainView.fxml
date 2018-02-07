@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.connector.Connector">
+   <center>
+      <StackPane fx:id="drawPane" BorderPane.alignment="CENTER" />
+   </center>
+   <right>
+      <VBox fx:id="rightVBox" prefHeight="250.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="searchBar" prefWidth="300.0" promptText="Search" style="-fx-background-radius: 0 0 0 0;" VBox.vgrow="ALWAYS" />
+            <HBox>
+               <children>
+                  <ProgressBar fx:id="progressBar" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" progress="0.0" style="-fx-background-radius: 0 0 0 0;" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="cancelRCSB" mnemonicParsing="false" style="-fx-background-radius: 0 0 0 0;" text="Cancel" />
+               </children>
+            </HBox>
+            <ListView fx:id="pdbList" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </right>
+   <bottom>
+      <VBox prefHeight="0.0" prefWidth="300.0" BorderPane.alignment="BOTTOM_LEFT">
+         <children>
+            <ScrollPane fx:id="labelPane" minHeight="-Infinity" prefHeight="50.0" prefWidth="300.0" vbarPolicy="NEVER" />
+         </children>
+      </VBox>
+   </bottom>
+   <top>
+      <VBox prefHeight="0.0" style="-fx-border-color: silver;" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem fx:id="loadFromFile" mnemonicParsing="false" text="Load from File">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="F" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="loadFromRCSB" mnemonicParsing="false" text="Load PDB ">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="P" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="loadPDBList" mnemonicParsing="false" text="Load complete PDB List">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="L" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <RadioMenuItem fx:id="showListView" mnemonicParsing="false" selected="true" text="Show PDB List">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="H" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator>
+                        </RadioMenuItem>
+                        <MenuItem fx:id="closeProgram" mnemonicParsing="false" text="Close">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="C" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator></MenuItem>
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                        <MenuItem fx:id="undo" mnemonicParsing="false" text="Undo">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="U" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="redo" mnemonicParsing="false" text="Redo">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="R" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="selectNone" mnemonicParsing="false" text="Select None">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <MenuItem fx:id="selectAll" mnemonicParsing="false" text="Select All">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="A" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <MenuItem fx:id="drawLine" mnemonicParsing="false" text="Draw Line">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="L" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="drawFill" mnemonicParsing="false" text="Draw Fill">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="F" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="View">
+                    <items>
+                        <Menu mnemonicParsing="false" text="Model">
+                          <items>
+                              <RadioMenuItem fx:id="ballStickView" mnemonicParsing="false" selected="true" text="BallStick">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="B" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                                 </accelerator>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="modelGroup" />
+                                 </toggleGroup>
+                              </RadioMenuItem>
+                              <RadioMenuItem fx:id="surfaceView" mnemonicParsing="false" text="SpaceFill" toggleGroup="$modelGroup">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="S" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                                 </accelerator>
+                              </RadioMenuItem>
+                              <RadioMenuItem fx:id="edgeView" mnemonicParsing="false" text="Edge" toggleGroup="$modelGroup">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="E" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                                 </accelerator>
+                              </RadioMenuItem>
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <RadioMenuItem fx:id="ribbonView" mnemonicParsing="false" text="Ribbon">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="R" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                                 </accelerator>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="ribbonGroup" />
+                                 </toggleGroup></RadioMenuItem>
+                              <RadioMenuItem fx:id="cartoonView" mnemonicParsing="false" text="Cartoon" toggleGroup="$ribbonGroup">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="C" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                                 </accelerator></RadioMenuItem>
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Color">
+                          <items>
+                              <RadioMenuItem fx:id="atomCol" mnemonicParsing="false" text="Atom">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="colorMenuGroup" />
+                                 </toggleGroup>
+                                 <accelerator>
+                                    <KeyCodeCombination alt="DOWN" code="B" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator>
+                              </RadioMenuItem>
+                              <RadioMenuItem fx:id="aminoAcidCol" mnemonicParsing="false" text="Amino Acid" toggleGroup="$colorMenuGroup">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="DOWN" code="A" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator></RadioMenuItem>
+                              <RadioMenuItem fx:id="secStrcCol" mnemonicParsing="false" text="Secondary Structure" toggleGroup="$colorMenuGroup">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="DOWN" code="S" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator></RadioMenuItem>
+                              <RadioMenuItem fx:id="chainColor" mnemonicParsing="false" text="Chain" toggleGroup="$colorMenuGroup">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="DOWN" code="C" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator></RadioMenuItem>
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Show">
+                          <items>
+                              <RadioMenuItem fx:id="allShow" mnemonicParsing="false" selected="true" text="All">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="A" control="DOWN" meta="DOWN" shift="UP" shortcut="UP" />
+                                 </accelerator>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="showGroup" />
+                                 </toggleGroup>
+                              </RadioMenuItem>
+                              <RadioMenuItem fx:id="backboneShow" mnemonicParsing="false" text="Backbone" toggleGroup="$showGroup">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="B" control="DOWN" meta="DOWN" shift="UP" shortcut="UP" />
+                                 </accelerator>
+                              </RadioMenuItem>
+                              <RadioMenuItem fx:id="smallBackboneShow" mnemonicParsing="false" text="Small Backbone" toggleGroup="$showGroup">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="DOWN" shift="UP" shortcut="UP" />
+                                 </accelerator>
+                              </RadioMenuItem>
+                              <RadioMenuItem fx:id="hide" mnemonicParsing="false" text="Hide All" toggleGroup="$showGroup">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="H" control="DOWN" meta="DOWN" shift="UP" shortcut="UP" />
+                                 </accelerator>
+                              </RadioMenuItem>
+                          </items>
+                        </Menu>
+                    </items>
+                  </Menu>
+                  <Menu fx:id="charts" mnemonicParsing="false" text="Charts">
+                    <items>
+                      <MenuItem fx:id="atomDistribution" mnemonicParsing="false" text="Atom Distribution" />
+                        <MenuItem fx:id="aminoAcidDistribution" mnemonicParsing="false" text="Amino Acid Distribution" />
+                    </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" spacing="5.0">
+               <children>
+                  <HBox maxWidth="1.7976931348623157E308" prefHeight="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <TextField fx:id="titleTextField" editable="false" prefWidth="500.0" style="-fx-background-radius: 0 0 0 0; -fx-background-color: transparent;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Num atoms:">
+                           <font>
+                              <Font name="System Font Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="numAtoms" editable="false" minWidth="-Infinity" prefWidth="60.0" style="-fx-background-radius: 0 0 0 0; -fx-background-color: transparent;" />
+                        <Label text="Num edges:" />
+                        <TextField fx:id="numEdges" editable="false" minWidth="-Infinity" prefWidth="60.0" style="-fx-background-radius: 0 0 0 0; -fx-background-color: transparent;" />
+                        <Label text="Num removed egdes:" />
+                        <TextField fx:id="numRemovedEdges" alignment="TOP_LEFT" editable="false" minWidth="-Infinity" prefWidth="60.0" style="-fx-background-radius: 0 0 0 0; -fx-background-color: transparent;" />
+                        <ProgressIndicator fx:id="progressIndicator" progress="0.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <HBox fx:id="toolHBox" alignment="CENTER" style="-fx-background-color: silver;" BorderPane.alignment="TOP_CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <ToolBar fx:id="toolBox" orientation="VERTICAL" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: silver;">
+               <items>
+                  <Separator prefWidth="200.0" />
+                  <VBox>
+                     <children>
+                        <Label text="Atom Size" VBox.vgrow="ALWAYS" />
+                        <Slider fx:id="changeAtomSize" blockIncrement="0.0" majorTickUnit="0.5" max="5.0" showTickMarks="true" value="1.0" />
+                     </children>
+                  </VBox>
+                  <Separator prefWidth="200.0" />
+                  <VBox>
+                     <children>
+                        <Label text="Bond Size" />
+                        <Slider fx:id="changeBondSize" blockIncrement="0.0" majorTickUnit="2.5" max="12.0" showTickMarks="true" value="5.0" />
+                     </children>
+                  </VBox>
+                  <Separator prefWidth="200.0" />
+                  <VBox alignment="CENTER" spacing="5.0" style="-fx-background-radius: 0 0 0 0;">
+                     <children>
+                        <CheckBox fx:id="autoRotation" mnemonicParsing="false" text="Auto Rotation" />
+                        <Button fx:id="resetRotation" mnemonicParsing="false" style="-fx-background-radius: 0 0 0 0;" text="Reset Rotation" />
+                     </children>
+                  </VBox>
+                  <Separator prefWidth="200.0" />
+                  <CheckBox fx:id="whiteBackground" mnemonicParsing="false" text="White Background" />
+                  <Separator prefWidth="200.0" />
+                  <VBox maxHeight="100.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="colorButton" maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" prefWidth="200.0" style="-fx-background-color: silver; -fx-background-radius: 0 0 0 0;" text="Coloring" />
+                        <HBox fx:id="colorBox" spacing="5.0">
+                           <children>
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <RadioButton fx:id="atomColorToggle" mnemonicParsing="false" selected="true" text="Atom">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="colorGroup" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="aminoAcidColorToggle" mnemonicParsing="false" text="Amino Acid" toggleGroup="$colorGroup" />
+                                 </children>
+                              </VBox>
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <RadioButton fx:id="secStrcColorToggle" mnemonicParsing="false" text="Sec. Structure" toggleGroup="$colorGroup" />
+                                    <RadioButton fx:id="chainColorToggle" mnemonicParsing="false" text="Chain" toggleGroup="$colorGroup" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Separator prefWidth="200.0" />
+                  <VBox layoutX="10.0" layoutY="215.0" maxHeight="100.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="showButton" maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" prefWidth="200.0" style="-fx-background-color: silver; -fx-background-radius: 0 0 0 0;" text="Show Atoms &amp; Bonds" />
+                        <HBox fx:id="showBox" spacing="5.0">
+                           <children>
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <RadioButton fx:id="allToggle" mnemonicParsing="false" selected="true" text="Show All">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="showToggleGroup" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="hideToggle" mnemonicParsing="false" text="Hide All" toggleGroup="$showToggleGroup" />
+                                 </children>
+                              </VBox>
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <RadioButton fx:id="backboneToggle" mnemonicParsing="false" text="Backbone" toggleGroup="$showToggleGroup" />
+                                    <RadioButton fx:id="smallBackboneToggle" mnemonicParsing="false" text="Small Backbone" toggleGroup="$showToggleGroup" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Separator prefWidth="200.0" />
+                  <VBox layoutX="20.0" layoutY="225.0" maxHeight="100.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="modelButton" maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" prefWidth="200.0" style="-fx-background-color: silver; -fx-background-radius: 0 0 0 0;" text="Model" />
+                        <HBox fx:id="modelBox" spacing="5.0">
+                           <children>
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <RadioButton fx:id="ballStickToggle" mnemonicParsing="false" selected="true" text="Ball-Stick">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="modelToggle" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="spaceFillToggle" mnemonicParsing="false" text="Spacefill" toggleGroup="$modelToggle" />
+                                    <RadioButton fx:id="edgeToggle" mnemonicParsing="false" text="Edge" toggleGroup="$modelToggle" />
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" />
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <CheckBox fx:id="ribbonToggle" mnemonicParsing="false" text="Ribbon" />
+                                    <CheckBox fx:id="cartoonToggle" mnemonicParsing="false" text="Cartoon" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Separator layoutX="10.0" layoutY="10.0" prefWidth="200.0" />
+               </items>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </ToolBar>
+            <Pane fx:id="closeButtonPane" prefWidth="30.0" style="-fx-background-color: black;">
+               <children>
+                  <Button fx:id="closeToolbar" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: silver; -fx-background-radius: 0 0 0 0;" text="&lt;" visible="false">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </left>
+</BorderPane>
