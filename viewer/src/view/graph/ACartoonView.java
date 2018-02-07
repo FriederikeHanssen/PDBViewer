@@ -7,6 +7,9 @@ import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.MeshView;
 import javafx.scene.shape.TriangleMesh;
 
+import java.net.URL;
+
+
 /**
  * @author Friederike Hanssen, 01.2018
  */
@@ -50,7 +53,12 @@ public class ACartoonView extends Group{
 
     public void setAminoAcidColor(){
         material.setDiffuseColor(Color.WHITE);
-        material.setDiffuseMap(new Image("file:PDBViewer/resources/amino_acid_colors.png"));
+
+try {
+    material.setDiffuseMap(new Image(this.getClass().getResourceAsStream("/amino_acid_colors.png")));
+}catch(Exception e){
+   e.printStackTrace();
+}
         meshView.setMaterial(material);
     }
 
